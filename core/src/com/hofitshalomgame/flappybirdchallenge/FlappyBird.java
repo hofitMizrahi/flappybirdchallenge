@@ -29,11 +29,11 @@ public class FlappyBird extends ApplicationAdapter {
 	private Preferences prefs;
 	private int highScore = 0;
 	private float scoreWidth;
-	private GlyphLayout glyphLayout;
+//	private GlyphLayout glyphLayout;
 
 	// to write Gdx text need to use font
 	private BitmapFont font;
-	BitmapFont font12;
+//	BitmapFont font12;
 
 	// music
 	private Music coinSound;
@@ -69,13 +69,15 @@ public class FlappyBird extends ApplicationAdapter {
 	@Override
 	public void create() {
 
-		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("number.ttf"));
-		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-		parameter.size = 12;
-		parameter.borderColor = Color.WHITE;
-		parameter.borderWidth = 3;
-		font12 = (BitmapFont) generator.generateFont(parameter); // font size 12 pixels
-		generator.dispose();
+//		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("number.ttf"));
+//		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+//		parameter.size = 12;
+//		parameter.borderColor = Color.WHITE;
+//		parameter.borderWidth = 3;
+//		font12 = (BitmapFont) generator.generateFont(parameter); // font size 12 pixels
+//		generator.dispose();
+		BitmapFont font = new BitmapFont(Gdx.files.internal("1.ttf"), false);
+
 
 		prefs = Gdx.app.getPreferences("My Preferences");
 		highScore = prefs.getInteger("score", 0);
